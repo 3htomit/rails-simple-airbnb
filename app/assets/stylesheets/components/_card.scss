@@ -1,0 +1,17 @@
+.flat-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  .main-card {
+    margin: 1rem;
+    background-color: $light;
+    .card-details, .card-link {
+      padding: 1rem;
+    }
+    .card-link {
+      // padding-bottom: 0;
+      background-color: $white;
+      border-top: 1px solid grey;
+      margin-bottom: 0;
+    }
+  }
+}
