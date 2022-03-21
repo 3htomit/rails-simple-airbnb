@@ -1,7 +1,7 @@
 require 'faker'
 
 4.times do
-  Flat.create(
+  Flat.create!(
     name: Faker::Book.title,
     address: Faker::Address.full_address,
     description: Faker::Lorem.paragraph,
