@@ -1,3 +1,20 @@
-<h1><%= @flat.name %></h1>
+<div class="container m-auto">
+  <div class="row">
+    <div class="col-8">
+      <div class="main-card p-3 bg-light card-shadow rounded">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
 
-<p><%= @flat.description %></p>
+      <div class="main-card p-3 mt-5">
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="main-card p-3 bg-light card-shadow rounded">
+        <h3>Book this flat!</h3>
+        <p><%= @flat.number_of_guests %> people | <%= @flat.price_per_night %> € /night</p>
+      </div>
+    </div>
+  </div>
+</div>
