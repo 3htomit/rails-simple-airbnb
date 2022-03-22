@@ -1,5 +1,6 @@
 class FlatsController < ApplicationController
-  before_action :set_flat, only: [:show]
+  before_action :set_flat, only: [:show, :edit]
+  before_action :flat_params, :save_flat, only: [:create, :update]
 
   def index
     @flats = Flat.all
@@ -9,13 +10,16 @@ class FlatsController < ApplicationController
   end
 
   def new
-    @new_flat = Flat.new
+    @flat = Flat.new
   end
 
   def create
-    @new_flat = Flat.new(flat_params)
-    @new_flat.save
-    redirect_to flat_path(@new_flat)
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   private
@@ -25,6 +29,11 @@ class FlatsController < ApplicationController
   end
 
   def flat_params
-    params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests)
+    @flat_params = params.require(:flat).permit(:name, :address, :description, :price_per_night, :number_of_guests)
+  end
+
+  def save_flat
+    @flat = Flat.create!(@flat_params)
+    redirect_to flat_path(@flat)
   end
 end

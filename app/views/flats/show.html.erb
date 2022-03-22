@@ -1,9 +1,16 @@
 <div class="container m-auto">
   <div class="row">
     <div class="col-8">
-      <div class="main-card p-3 bg-light card-shadow rounded">
-        <h1><%= @flat.name %></h1>
-        <p><%= @flat.address %></p>
+      <div class="main-card d-flex justify-content-between p-3 bg-light card-shadow rounded">
+        <div class="details">
+          <h1><%= @flat.name %></h1>
+          <p><%= @flat.address %></p>
+        </div>
+        <div class="edit-btn">
+          <%= link_to edit_flat_path(@flat.id), class: "btn btn-outline-secondary" do %>
+            <i class="fas fa-pen"></i>
+          <% end %>
+        </div>
       </div>
 
       <div class="main-card p-3 mt-5">
