@@ -1,7 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon mb-5 tile-shadow">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon tile-shadow">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <%= link_to flats_path, class: "navbar-brand" do %>
+      <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/9/93/Housing_Anywhere_logo.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,9 +11,6 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", flats_path, class: "nav-link" %>
-          </li>
           <li class="nav-item">
             <%= link_to "Add a flat", new_flat_path, class: "nav-link" %>
           </li>

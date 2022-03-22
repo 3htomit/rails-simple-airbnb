@@ -36,6 +36,7 @@ group :development, :test do
   gem 'faker'
   gem 'dotenv-rails'
   gem 'cloudinary', '~> 1.16.0'
+  gem 'unsplash'
 end
 
 group :development do

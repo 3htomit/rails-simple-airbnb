@@ -11,6 +11,17 @@
 
 // Pages CSS partials
 @import "pages/flat_form";
+@import "pages/flat_show";
 
 // Global CSS partials
 @import "global/shadow";
+@import "global/round";
+
+// Global style
+a {
+  color: initial;
+  text-decoration: none;
+  &:hover {
+    color: goldenrod;
+  }
+}

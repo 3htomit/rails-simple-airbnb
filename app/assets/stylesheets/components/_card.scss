@@ -1,17 +1,15 @@
 .flat-cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
   .main-card {
-    margin: 1rem;
-    background-color: $light;
-    .card-details, .card-link {
+    background-color: white;
+    height: 100%;
+    .card-details {
+      height: 100%;
       padding: 1rem;
-    }
-    .card-link {
-      // padding-bottom: 0;
-      background-color: $white;
-      border-top: 1px solid grey;
-      margin-bottom: 0;
+      display: grid;
+      align-content: space-between;
     }
   }
 }

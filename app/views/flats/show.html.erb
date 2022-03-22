@@ -1,13 +1,19 @@
-<div class="container m-auto">
+<div class="bg-image" style="background-image: url(<%= @flat.photo_url %>);"></div>
+
+<div class="container flat-show-container">
   <div class="row">
+
     <div class="col-8">
+
       <div class="main-card d-flex justify-content-between p-3 bg-light card-shadow rounded">
+
         <div class="details">
           <h1><%= @flat.name %></h1>
           <p><%= @flat.address %></p>
         </div>
-        <div class="edit-btn">
-          <%= link_to edit_flat_path(@flat.id), class: "btn btn-outline-secondary" do %>
+
+        <div class="buttons">
+          <%= link_to edit_flat_path(@flat.id), class: "btn btn-outline-secondary edit-btn" do %>
             <i class="fas fa-pen"></i>
           <% end %>
           <%= link_to flat_path(@flat),
@@ -17,17 +23,23 @@
             <i class="fas fa-times"></i>
           <% end %>
         </div>
+
       </div>
 
       <div class="main-card p-3 mt-5">
-        <p><%= @flat.description %></p>
+        <p><%= simple_format(@flat.description) %></p>
       </div>
+
     </div>
+
     <div class="col-4">
+
       <div class="main-card p-3 bg-light card-shadow rounded">
         <h3>Book this flat!</h3>
         <p><%= @flat.number_of_guests %> people | <%= @flat.price_per_night %> € /night</p>
       </div>
+
     </div>
+
   </div>
 </div>
