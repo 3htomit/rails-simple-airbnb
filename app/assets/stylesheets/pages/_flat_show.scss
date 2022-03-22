@@ -1,0 +1,16 @@
+.bg-image {
+  height: 30rem;
+  background-position: center;
+}
+
+.flat-show-container {
+  margin-top: -5rem;
+  .buttons {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    .edit-btn {
+      margin-right: 0.5rem;
+    }
+  }
+}
