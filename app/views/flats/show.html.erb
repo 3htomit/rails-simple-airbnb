@@ -10,6 +10,12 @@
           <%= link_to edit_flat_path(@flat.id), class: "btn btn-outline-secondary" do %>
             <i class="fas fa-pen"></i>
           <% end %>
+          <%= link_to flat_path(@flat),
+            method: :delete,
+            data: { confirm: "Do you really want to delete #{@flat.name}?" },
+            class: "btn btn-outline-danger" do %>
+            <i class="fas fa-times"></i>
+          <% end %>
         </div>
       </div>
 
